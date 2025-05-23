@@ -1,70 +1,93 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Search List
 
-## Available Scripts
+Este projeto é uma aplicação em React que exibe uma lista de dados de banda e músicas com **funcionalidade de busca** em tempo real. À medida que o usuário digita no campo de pesquisa, a lista é filtrada automaticamente com base no texto informado.
 
-In the project directory, you can run:
+## 🧩 Funcionalidades
 
-### `yarn start`
+- Busca dinâmica em uma lista de dados.
+- Filtragem instantânea sem necessidade de recarregar a página.
+- Interface simples e responsiva.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🚀 Tecnologias Utilizadas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [React](https://reactjs.org/)
+- [JavaScript (ES6+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Yarn](https://yarnpkg.com/)
+- [react-scripts](https://www.npmjs.com/package/react-scripts)
 
-### `yarn test`
+## 📦 Como rodar o projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Pré-requisitos
 
-### `yarn build`
+- **Node.js 16 ou 18 (com `--openssl-legacy-provider`)**
+- **Yarn** instalado globalmente
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. Clone o repositório
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/ivannatech/react-search-list.git
+cd react-search-list
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Instale as dependências
 
-### `yarn eject`
+```bash
+yarn install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 3. Inicie o servidor de desenvolvimento
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Se estiver usando o **PowerShell**, execute:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```powershell
+$env:NODE_OPTIONS="--openssl-legacy-provider"
+yarn start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Se estiver usando o **Prompt de Comando (cmd.exe)**:
 
-## Learn More
+```cmd
+set NODE_OPTIONS=--openssl-legacy-provider && yarn start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+O projeto será iniciado em: [http://localhost:3000](http://localhost:3000)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🧯 Erros comuns e soluções
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### ❌ `ERR_PACKAGE_PATH_NOT_EXPORTED` ao iniciar
 
-### Analyzing the Bundle Size
+**Causa**: Versão do Node.js muito nova (ex: 22+).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Solução**: Use Node.js 18 ou 16 via [nvm](https://github.com/coreybutler/nvm-windows/releases) (Node Version Manager para Windows).
 
-### Making a Progressive Web App
+### ❌ `error:0308010C:digital envelope routines::unsupported`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Causa**: O Webpack tem problemas com OpenSSL no Node.js 17+.
 
-### Advanced Configuration
+**Soluções**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Defina a variável `NODE_OPTIONS` com `--openssl-legacy-provider`:
+  - PowerShell: `$env:NODE_OPTIONS="--openssl-legacy-provider"`
+  - CMD: `set NODE_OPTIONS=--openssl-legacy-provider`
+- Ou use Node.js 16 com `nvm`.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contribuições
 
-### `yarn build` fails to minify
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests com melhorias, correções ou novas funcionalidades.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
+
+## ✨ Desenvolvido por
+
+Ivanna • [GitHub](https://github.com/ivannatech)
